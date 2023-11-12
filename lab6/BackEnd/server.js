@@ -1,13 +1,13 @@
-// Importing required modules and set up the Express application
+// Importing required modules and set up the Express app
 const express = require('express');
 const app = express();
 const port = 4000;
 const cors = require('cors');
 
-// Enabling Cross-Origin Resource Sharing (CORS) for the application
+// Enabled Cross-Origin Resource Sharing (CORS) for the app
 app.use(cors());
 
-// Setting up CORS headers to allow requests from any origin and specify allowed methods and headers
+// Setting up CORS headers for any requests from any origin and specify allowed methods and headers
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
@@ -27,13 +27,13 @@ app.post('/name', (req, res) => {
   res.send('Hello ' + req.body.firstname + " " + req.body.lastname);
 });
 
-// Defining a route to handle POST requests to '/api/book'
+
 app.post('/api/book', (req, res) => {
   console.log(req.body);
   res.send("Book Created");
 });
 
-// Defining a route to handle GET requests to the root '/'
+// Defining a route to  GET requests to root '/'
 app.get('/', (req, res) => {
   res.send('Hello World!');
 });
@@ -68,7 +68,7 @@ app.get('/api/books', (req, res) => {
     }
   ];
 
-  // Responding with JSON data and a custom message
+  
   res.json({
     myBooks: data,
     "MyMessage": "Hello Data"
