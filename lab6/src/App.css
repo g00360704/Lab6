@@ -1,0 +1,45 @@
+/* Styles for the root container of the application */
+.App {
+  text-align: center;
+}
+
+/* Styles for the application logo */
+.App-logo {
+  height: 40vmin;            /* Set the height relative to the viewport height */
+  pointer-events: none;      /* Prevent pointer events on the logo (e.g., clicking) */
+}
+
+/* Media query for animations when the user prefers reduced motion */
+@media (prefers-reduced-motion: no-preference) {
+  /* Styles for the spinning animation of the logo */
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear; /* Apply the 'App-logo-spin' animation */
+  }
+}
+
+/* Styles for the application header */
+.App-header {
+  background-color: #282c34; /* Set the background color */
+  min-height: 100vh;         /* Minimum height of the header, covering the entire viewport height */
+  display: flex;              /* Use flex layout for positioning */
+  flex-direction: column;     /* Stack child elements vertically */
+  align-items: center;       /* Center horizontally */
+  justify-content: center;   /* Center vertically */
+  font-size: calc(10px + 2vmin); /* Calculate font size based on viewport size */
+  color: white;              /* Set text color to white */
+}
+
+/* Styles for links in the application */
+.App-link {
+  color: #61dafb;           /* Set link color */
+}
+
+/* Keyframes definition for the spinning animation of the logo */
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg); /* Start the animation with no rotation */
+  }
+  to {
+    transform: rotate(360deg); /* End the animation with a full 360-degree rotation */
+  }
+}
